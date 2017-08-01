@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidDebugHelper</string>
+    <string name="open_debug_mode">打开调试模式</string>
+    <string name="wireless_connect">无线连接</string>
 </resources>
