@@ -1,13 +1,17 @@
 package org.mazhuang.androiddebughelper;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import org.mazhuang.androiddebughelper.base.BaseActivity;
+import org.mazhuang.androiddebughelper.util.LogUtils;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LogUtils.e("hello, debug helper");
     }
 }
