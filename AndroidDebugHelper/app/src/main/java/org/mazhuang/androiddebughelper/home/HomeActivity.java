@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import org.mazhuang.androiddebughelper.R;
 import org.mazhuang.androiddebughelper.base.BaseActivity;
+import org.mazhuang.androiddebughelper.util.NetworkUtils;
 
 public class HomeActivity extends BaseActivity {
 
@@ -35,6 +37,10 @@ public class HomeActivity extends BaseActivity {
                         break;
 
                     case R.string.wireless_connect:
+                        break;
+
+                    case R.string.show_ip_address:
+                        Toast.makeText(HomeActivity.this, NetworkUtils.getIpAddress(), Toast.LENGTH_SHORT).show();
                         break;
 
                     default:
