@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/item_feature_height"
         android:layout_margin="@dimen/item_feature_margin"
-        android:background="@android:color/darker_gray"
+        android:background="@color/feature_item_bk"
         android:gravity="center"/>
 
 </LinearLayout>

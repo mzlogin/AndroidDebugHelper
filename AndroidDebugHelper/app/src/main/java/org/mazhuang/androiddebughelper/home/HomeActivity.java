@@ -11,7 +11,9 @@ import org.mazhuang.androiddebughelper.R;
 import org.mazhuang.androiddebughelper.base.BaseActivity;
 import org.mazhuang.androiddebughelper.util.NetworkUtils;
 
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity implements HomeContract.View {
+
+    private HomeContract.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,8 @@ public class HomeActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
+
+        mPresenter = new HomePresenter(this);
     }
 
     private void initViews() {
@@ -37,10 +41,11 @@ public class HomeActivity extends BaseActivity {
                         break;
 
                     case R.string.wireless_connect:
+                        mPresenter.setAdbTcpPort();
                         break;
 
                     case R.string.show_ip_address:
-                        Toast.makeText(HomeActivity.this, NetworkUtils.getIpAddress(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeActivity.this, NetworkUtils.getIpAddress(), Toast.LENGTH_LONG).show();
                         break;
 
                     default:
@@ -49,5 +54,15 @@ public class HomeActivity extends BaseActivity {
             }
         });
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    @Override
+    public void onSetAdbTcpPortSucceed(String ipAddress) {
+        Toast.makeText(this, ipAddress, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onSetAdbTcpPortFailed(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
