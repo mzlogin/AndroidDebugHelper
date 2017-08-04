@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidDebugHelper</string>
+    <string name="app_name">调试利器</string>
     <string name="open_debug_mode">打开调试模式</string>
     <string name="wireless_connect">不借助 USB 的无线连接</string>
     <string name="show_ip_address">显示 IP 地址</string>
