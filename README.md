@@ -7,6 +7,7 @@ A tiny tool for Android Developers
 - [x] open developer options
 - [x] wireless connect without usb cable
 - [x] show ip address
+- [x] show VM name and version
 
 ## Screenshots
 
