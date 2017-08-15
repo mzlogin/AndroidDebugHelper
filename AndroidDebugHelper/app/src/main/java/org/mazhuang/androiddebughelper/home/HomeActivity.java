@@ -10,6 +10,7 @@ import android.widget.Toast;
 import org.mazhuang.androiddebughelper.R;
 import org.mazhuang.androiddebughelper.base.BaseActivity;
 import org.mazhuang.androiddebughelper.util.NetworkUtils;
+import org.mazhuang.androiddebughelper.util.SystemInfoUtils;
 
 public class HomeActivity extends BaseActivity implements HomeContract.View {
 
@@ -46,6 +47,10 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
 
                     case R.string.show_ip_address:
                         Toast.makeText(HomeActivity.this, NetworkUtils.getIpAddress(), Toast.LENGTH_LONG).show();
+                        break;
+
+                    case R.string.show_vm:
+                        Toast.makeText(HomeActivity.this, SystemInfoUtils.getVmInUse(), Toast.LENGTH_SHORT).show();
                         break;
 
                     default:

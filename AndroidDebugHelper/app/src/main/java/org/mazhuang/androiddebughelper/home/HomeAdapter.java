@@ -18,7 +18,8 @@ class HomeAdapter extends android.support.v7.widget.RecyclerView.Adapter<HomeAda
     private static FeatureItem[] mDataSet = {
             new FeatureItem(R.string.open_debug_mode),
             new FeatureItem(R.string.wireless_connect),
-            new FeatureItem(R.string.show_ip_address)
+            new FeatureItem(R.string.show_ip_address),
+            new FeatureItem(R.string.show_vm)
     };
 
     private OnItemClickListener mItemClickListener;
