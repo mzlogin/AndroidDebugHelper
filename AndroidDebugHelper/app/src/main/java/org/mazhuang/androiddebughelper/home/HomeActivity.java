@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import org.mazhuang.androiddebughelper.R;
 import org.mazhuang.androiddebughelper.base.BaseActivity;
@@ -46,11 +45,11 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
                         break;
 
                     case R.string.show_ip_address:
-                        Toast.makeText(HomeActivity.this, NetworkUtils.getIpAddress(), Toast.LENGTH_LONG).show();
+                        alert(NetworkUtils.getIpAddress());
                         break;
 
                     case R.string.show_vm:
-                        Toast.makeText(HomeActivity.this, SystemInfoUtils.getVmInUse(), Toast.LENGTH_SHORT).show();
+                        alert(SystemInfoUtils.getVmInUse());
                         break;
 
                     default:
@@ -63,11 +62,11 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
 
     @Override
     public void onSetAdbTcpPortSucceed(String ipAddress) {
-        Toast.makeText(this, ipAddress, Toast.LENGTH_LONG).show();
+        alert(getString(R.string.wireless_connect_format, ipAddress));
     }
 
     @Override
     public void onSetAdbTcpPortFailed(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        toast(msg);
     }
 }

@@ -4,4 +4,7 @@
     <string name="wireless_connect">不借助 USB 的无线连接</string>
     <string name="show_ip_address">显示 IP 地址</string>
     <string name="show_vm">虚拟机</string>
+    <string name="tips">提示</string>
+    <string name="wireless_connect_format">请在同局域网内电脑上运行\nadb connect %1$s</string>
+    <string name="ok_i_know">好我知道了</string>
 </resources>
